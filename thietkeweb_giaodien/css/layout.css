@@ -1,0 +1,17 @@
+div a{
+    text-decoration: none;
+}
+.bg-footer{
+    background-color: #24272e;
+    color: white;
+
+}
+a header{
+    color: black;
+}
+ul {
+    list-style: none;
+}
+ul a{
+    color: aliceblue;
+}
