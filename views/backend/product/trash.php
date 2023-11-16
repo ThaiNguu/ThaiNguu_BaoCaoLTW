@@ -2,10 +2,15 @@
 use App\Models\Product;
 //SELECT*FROM product WHERE status !=0 AND ODERBY created DESC
 
-$list = Product::where('status','=',0)
-->select('status','id','image','name','slug')
- ->productBy('created_at','DESC')
- ->get();
+// $list = Product::where('status','=',0)
+// ->select('status','id','image','name','slug')
+//  ->productBy('created_at','DESC')
+//  ->get();
+$list = Product::join('category', 'product.category_id', '=', 'category.id')
+   ->join('brand', 'product.brand_id', '=', 'brand.id')
+   ->where('product.status', '=', 0)
+   ->select("product.*", "category.name as category_name", "brand.name as brand_name")
+   ->get();
 
 ?>
 <?php require_once '../views/backend/header.php';?>
@@ -15,7 +20,7 @@ $list = Product::where('status','=',0)
             <div class="container-fluid">
                <div class="row mb-2">
                   <div class="col-sm-12">
-                     <h1 class="d-inline">Thùng rác thương hiệu</h1>
+                     <h1 class="d-inline">Thùng rác</h1>
                   </div>
                </div>
                

@@ -17,7 +17,7 @@ if ($contact == NULL)
             <div class="container-fluid">
                <div class="row mb-2">
                   <div class="col-sm-12">
-                     <h1 class="d-inline">Chi tiết thương hiệu</h1>
+                     <h1 class="d-inline">Chi tiết liên hệ</h1>
                   </div>
                </div>
                
@@ -39,7 +39,7 @@ if ($contact == NULL)
                   <div class="row">
                      <div class="col-md-4">
                         <div class="mb-3">
-                           <label>Tên thương hiệu (*)</label>
+                           <label>Tên liên hệ (*)</label>
                            <input type="text" name="name" class="form-control">
                         </div>
                         <div class="mb-3">

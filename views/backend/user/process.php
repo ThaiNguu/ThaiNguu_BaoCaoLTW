@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\user;
+use App\Models\User;
 use App\Libraries\MyClass;
 
 if(isset($_user['THEM']))
@@ -8,8 +8,10 @@ if(isset($_user['THEM']))
     $user=new User();
     //lấy từ form
     $user->name = $_user['name'];
-    $user->slug =(strlen($_user['slug'])>0) ? $_user['slug']: MyClass::str_slug($_user['name']);
-    $user->description = $_user['description'];
+    $user->username = $_user['username'];
+    $user->phone = $_user['phone'];
+    $user->email = $_user['email'];
+    $user->password = $_user['password'];
     $user->status = $_user['status'];
     //Xử lí uploadfile
     if(strlen($_FILES['image']['name'])>0){
@@ -30,7 +32,7 @@ if(isset($_user['THEM']))
     //luu vao csdl
     //ínet
     $user->save();
-    $_SESSION['message']="Thêm thành công";
+    MyClass::set_flash('message',['msg'=>'Thêm thành công','type'=>'success']);
     header("location:index.php?option=user");
 }
 
@@ -44,12 +46,13 @@ if(isset($_user['CAPNHAT']))
     $user=User::find($id);
     if ($user == NULL)
 {
+    MyClass::set_flash('message',['msg'=>'Lỗi trang 404','type'=>'danger']);
     header("location:index.php?option=user");
 }
     //lấy từ form
     $user->name = $_user['name'];
-    $user->slug =(strlen($_user['slug'])>0) ? $_user['slug']: MyClass::str_slug($_user['name']);
-    $user->description = $_user['description'];
+    $user->phone = $_user['phone'];
+    $user->email = $_user['email'];
     $user->status = $_user['status'];
     //Xử lí uploadfile
     if(strlen($_FILES['image']['name'])>0){
@@ -74,6 +77,7 @@ if(isset($_user['CAPNHAT']))
     //ínet
     $user->save();
     //
+    MyClass::set_flash('message',['msg'=>'Cập nhật thành công','type'=>'success']);
     header("location:index.php?option=user");
 }
 

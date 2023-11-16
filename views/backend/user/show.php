@@ -99,7 +99,7 @@ if ($user == NULL)
                          </tr> 
                          <tr>
                            <td>Hình ảnh</td>
-                           <td><img style="width:100px;" src="../public/images/user/<?=  $item->image; ?>" alt="<?=$item->image;?>" ></td>
+                           <td><img style="width:100px;" src="../public/images/user/<?=  $user->image; ?>" alt="<?=$user->image;?>" ></td>
                          </tr> 
                          <tr>
                            <td>Quyền truy cập</td>

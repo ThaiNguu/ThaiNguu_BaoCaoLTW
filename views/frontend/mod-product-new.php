@@ -7,13 +7,13 @@ $mod_list_product = Product::where('status','=',1)
 ->get();
 ?>
 <ul class="list-group mb-3 list-product-new">
-                  <li class="list-group-item bg-main py-3">Sản phẩm mới</li>
+                  <li class="list-group-item bg-warning py-3">Sản phẩm mới</li>
                   <?php foreach($mod_list_product as $pro):?>
                   <li class="list-group-item">
                      <div class="product-item border">
                         <div class="product-item-image">
                            <a href="index.php?option=product&slug=<?=$pro->slug;?>">
-                              <img src="../public/images/product/<?=$pro->image;?>" class="img-fluid" alt="<?=$pro->image;?>">
+                              <img src="public/images/product/<?=$pro->image;?>" class="img-fluid" alt="<?=$pro->image;?>">
                            </a>
                         </div>
                         <h2 class="product-item-name text-main text-center fs-5 py-1">

@@ -19,7 +19,7 @@ enctype="multipart/form-data">
             <div class="container-fluid">
                <div class="row mb-2">
                   <div class="col-sm-12">
-                     <h1 class="d-inline">Cập nhật thương hiệu</h1>
+                     <h1 class="d-inline">Cập nhật sản phẩm</h1>
                   </div>
                </div>
             </div>
@@ -50,7 +50,7 @@ enctype="multipart/form-data">
                      <div class="col-md-12">
                         <div class="mb-3">
                            <input type="hidden" name = "id" value="<?= $product->id;?>">
-                           <label>Tên thương hiệu (*)</label>
+                           <label>Tên sản phẩm (*)</label>
                            <input type="text" value="<?= $product->name;?>" name= "name" class="form-control">
                         </div>
                         <div class="mb-3">

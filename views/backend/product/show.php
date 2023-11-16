@@ -17,7 +17,7 @@ if ($product == NULL)
             <div class="container-fluid">
                <div class="row mb-2">
                   <div class="col-sm-12">
-                     <h1 class="d-inline">Chi tiết thương hiệu</h1>
+                     <h1 class="d-inline">Chi tiết sản phẩm</h1>
                   </div>
                </div>
                
@@ -39,7 +39,7 @@ if ($product == NULL)
                   <div class="row">
                      <div class="col-md-4">
                         <div class="mb-3">
-                           <label>Tên thương hiệu (*)</label>
+                           <label>Tên sản phẩm   (*)</label>
                            <input type="text" name="name" class="form-control">
                         </div>
                         <div class="mb-3">
@@ -90,7 +90,7 @@ if ($product == NULL)
                            <td><?=$product->slug;?></td>
                          </tr> 
                            <td>Hình ảnh</td>
-                           <td><img style="width:100px;" src="../public/images/product/<?=  $item->image; ?>" alt="<?=$item->image;?>" ></td>
+                           <td><img style="width:100px;" src="../public/images/product/<?=  $product->image; ?>" alt="<?=$product->image;?>" ></td>
                          </tr> 
                          <tr>
                            <td>Chi tiết</td>

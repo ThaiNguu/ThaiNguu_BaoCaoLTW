@@ -16,7 +16,7 @@ $list = Menu::where('status','=',0)
             <div class="container-fluid">
                <div class="row mb-2">
                   <div class="col-sm-12">
-                     <h1 class="d-inline">Thùng rác thương hiệu</h1>
+                     <h1 class="d-inline">Thùng rác Menu</h1>
                   </div>
                </div>
                
@@ -40,27 +40,7 @@ $list = Menu::where('status','=',0)
                </div>
                <div class="card-body">
                   <div class="row">
-                     <div class="col-md-4">
-                        <div class="mb-3">
-                           <label>Tên thương hiệu (*)</label>
-                           <input type="text" name="name" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                           <label>Slug</label>
-                           <input type="text" name="slug" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                           <label>Hình đại diện</label>
-                           <input type="file" name="image" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                           <label>Trạng thái</label>
-                           <select name="status" class="form-control">
-                              <option value="1">Xuất bản</option>
-                              <option value="2">Chưa xuất bản</option>
-                           </select>
-                        </div>
-                     </div>
+                    
                      <div class="card-body">
                         <div class="row">
                      <div class="col-md-12">
@@ -70,9 +50,9 @@ $list = Menu::where('status','=',0)
                                  <th class="text-center" style="width:30px;">
                                     <input type="checkbox">
                                  </th>
-                                 <th class="text-center" style="width:130px;">Hình ảnh</th>
-                                 <th>Tên thương hiệu</th>
-                                 <th>Tên slug</th>
+                                 
+                                 <th>Tên menu</th>
+                                 <th>Liên kết</th>
                               </tr>
                            </thead>
                            <tbody>
@@ -82,9 +62,7 @@ $list = Menu::where('status','=',0)
                                  <td>
                                     <input type="checkbox">
                                  </td>
-                                 <td>
-                                    <img src="../public/images/menu/<?php  $item->image; ?>" alt="<?php  $item->image; ?>">
-                                 </td>
+                                 
                                  <td>
                                     <div class="name">
                                     <?= $item->name; ?>
@@ -96,7 +74,7 @@ $list = Menu::where('status','=',0)
                                        <i class="fas fa-trash"></i>Xoá vĩnh viễn</a>
                                     </div>
                                  </td>
-                                 <td><?= $item->slug; ?></td>
+                                 <td><?= $item->link; ?></td>
                               </tr>
                               <?php endforeach; ?>
                               <?php endif; ?>

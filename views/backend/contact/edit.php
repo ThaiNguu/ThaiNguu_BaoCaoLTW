@@ -18,7 +18,7 @@ enctype="multipart/form-data">
             <div class="container-fluid">
                <div class="row mb-2">
                   <div class="col-sm-12">
-                     <h1 class="d-inline">Cập nhật thương hiệu</h1>
+                     <h1 class="d-inline">Cập nhật liên hệ</h1>
                   </div>
                </div>
             </div>
@@ -40,22 +40,20 @@ enctype="multipart/form-data">
                <div class="card-body">
                   <div class="row">
                      <div class="col-md-12">
-                        <div class="mb-3">
+                       <div class="mb-3">
                            <input type="hidden" name = "id" value="<?= $contact->id;?>">
-                           <label>Tên thương hiệu (*)</label>
+                           <label label>Tên liên hệ (*)</label>
                            <input type="text" value="<?= $contact->name;?>" name= "name" class="form-control">
                         </div>
                         <div class="mb-3">
-                           <label>Slug</label>
-                           <input type="text" value="<?= $contact->slug;?>"name="slug" class="form-control">
+                           <input type="hidden" phone = "phone" value="<?= $contact->phone;?>">
+                           <label label>Điện thoại (*)</label>
+                           <input type="text" value="<?= $contact->phone;?>" name= "phone" class="form-control">
                         </div>
                         <div class="mb-3">
-                           <label>Mô tả</label>
-                           <textarea name="description" class="form-control"><?= $contact->description;?></textarea>
-                        </div>
-                        <div class="mb-3">
-                           <label>Hình đại diện</label>
-                           <input type="file" name="image" class="form-control">
+                           <input type="hidden" email = "email" value="<?= $contact->email;?>">
+                           <label label>Email (*)</label>
+                           <input type="text" value="<?= $contact->email;?>" name= "email" class="form-control">
                         </div>
                         <div class="mb-3">
                            <label>Trạng thái</label>

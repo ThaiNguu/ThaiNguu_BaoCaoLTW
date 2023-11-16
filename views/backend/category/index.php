@@ -42,7 +42,7 @@ enctype="multipart/form-data">
                   </button></div>
                
                   <div class="card-body">
-                  <?php require_once '../views/backend/message.php';?>
+                  <?php require '../views/backend/message.php';?>
                   <div class="row">
                      <div class="col-md-4">
                         <div class="mb-3">
@@ -93,7 +93,7 @@ enctype="multipart/form-data">
                                     <input type="checkbox">
                                  </td>
                                  <td>
-                                    <img src="../public/images/<?php  $item->image; ?>" alt="<?php  $item->image; ?>">
+                                    <img src="../public/images/category/<?=  $item->image; ?>" alt="<?=  $item->image; ?>"style="width:130px;">
                                  </td>
                                  <td>
                                     <div class="name">

@@ -17,8 +17,8 @@
         ]
     },
     "require": {
-        "illuminate/database": "^10.26",
-        "illuminate/events": "^10.26"
+        "illuminate/database": "^10.30",
+        "illuminate/events": "^10.30"
     }
        
 }

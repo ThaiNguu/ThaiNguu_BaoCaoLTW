@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\Contact;
-//SELECT*FROM category WHERE status !=0 AND ODERBY created DESC
+//SELECT*FROM contact WHERE status !=0 AND ODERBY created DESC
 
 $list = Contact::where('status','!=',0)
 ->select('status','id','name','content','phone','email')
@@ -24,9 +24,10 @@ $list = Contact::where('status','!=',0)
          <!-- Main content -->
          <section class="content">
             <div class="card">
-               <div class="card-header text-right">
-                  Noi dung
-               </div>
+            <div class="card-header">
+            <a href="index.php?option=contact&cat=trash" class="btn btn-danger">
+               <i class="fa fa-trash"></i> Thùng rác</a>
+         </div>
                <div class="card-body">
                   <table class="table table-bordered" id="mytable">
                      <thead>
@@ -37,7 +38,7 @@ $list = Contact::where('status','!=',0)
                            <th>Họ tên</th>
                            <th>Điện thoại</th>
                            <th>Email</th>
-                           <th>Tiêu đề</th>
+                       
                         </tr>
                      </thead>
                      <tbody>
@@ -69,7 +70,7 @@ $list = Contact::where('status','!=',0)
                            </td>
                            <td><?= $item->phone;?></td>
                            <td><?= $item->email;?></td>
-                           <td><?= $item->title;?></td>
+                          
                         </tr>
                         <?php endforeach; ?>
                               <?php endif; ?>

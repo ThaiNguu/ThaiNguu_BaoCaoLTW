@@ -18,7 +18,7 @@ enctype="multipart/form-data">
             <div class="container-fluid">
                <div class="row mb-2">
                   <div class="col-sm-12">
-                     <h1 class="d-inline">Cập nhật thương hiệu</h1>
+                     <h1 class="d-inline">Cập nhật chủ đề</h1>
                   </div>
                </div>
             </div>
@@ -42,20 +42,12 @@ enctype="multipart/form-data">
                      <div class="col-md-12">
                         <div class="mb-3">
                            <input type="hidden" name = "id" value="<?= $topic->id;?>">
-                           <label>Tên thương hiệu (*)</label>
+                           <label>Tên chủ đề (*)</label>
                            <input type="text" value="<?= $topic->name;?>" name= "name" class="form-control">
                         </div>
                         <div class="mb-3">
                            <label>Slug</label>
                            <input type="text" value="<?= $topic->slug;?>"name="slug" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                           <label>Mô tả</label>
-                           <textarea name="description" class="form-control"><?= $topic->description;?></textarea>
-                        </div>
-                        <div class="mb-3">
-                           <label>Hình đại diện</label>
-                           <input type="file" name="image" class="form-control">
                         </div>
                         <div class="mb-3">
                            <label>Trạng thái</label>

@@ -12,3 +12,4 @@ $mod_footermenu = Menu::where([['position','=','footermenu'],['status','=',1]])
                   <li><a href=""><?=$rowmenu->name;?></a></li>
                   <?php endforeach;?>
                </ul>
+               

@@ -4,7 +4,7 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Tiêu đề giao diện</title>
+   <title>Quản trị hệ thống</title>
    <link rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
       <link rel="stylesheet" href="../public/plugins/fontawesome-free/css/all.min.css">
@@ -191,7 +191,7 @@
                         <li class="nav-item">
                            <a href="index.php?option=banner" class="nav-link">
                               <i class="far fa-circle nav-icon"></i>
-                              <p>Banner</p>
+                              <p>Slider</p>
                            </a>
                         </li>
                      </ul>
@@ -209,6 +209,12 @@
                            <a href="index.php?option=user" class="nav-link">
                               <i class="far fa-circle nav-icon"></i>
                               <p>Thành viên</p>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="index.php?option=config" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>Cấu hình</p>
                            </a>
                         </li>
                         <!-- <li class="nav-item">

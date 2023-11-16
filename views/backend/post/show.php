@@ -17,7 +17,7 @@ if ($post == NULL)
             <div class="container-fluid">
                <div class="row mb-2">
                   <div class="col-sm-12">
-                     <h1 class="d-inline">Chi tiết thương hiệu</h1>
+                     <h1 class="d-inline">Chi tiết bài viết</h1>
                   </div>
                </div>
                
@@ -39,7 +39,7 @@ if ($post == NULL)
                   <div class="row">
                      <div class="col-md-4">
                         <div class="mb-3">
-                           <label>Tên thương hiệu (*)</label>
+                           <label>Tên bài viết (*)</label>
                            <input type="text" name="name" class="form-control">
                         </div>
                         <div class="mb-3">
@@ -92,7 +92,7 @@ if ($post == NULL)
                          
                          <tr>
                            <td>Hình ảnh</td>
-                           <td><img style="width:100px;" src="../public/images/post/<?=  $item->image; ?>" alt="<?=$item->image;?>" ></td>
+                           <td><img style="width:100px;" src="../public/images/post/<?=  $post->image; ?>" alt="<?=$post->image;?>" ></td>
                          </tr> 
                          <tr>
                            <td>Kiểu bài viết</td>

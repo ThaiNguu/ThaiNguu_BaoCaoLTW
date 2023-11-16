@@ -16,9 +16,10 @@
          <!-- Main content -->
          <section class="content">
             <div class="card">
-               <div class="card-header">
-                  Noi dung
-               </div>
+            <div class="card-header">
+            <a href="index.php?option=customer&cat=trash" class="btn btn-danger">
+               <i class="fa fa-trash"></i> Thùng rác</a>
+         </div>
                <div class="card-body">
                   <table class="table table-bordered" id="mytable">
                      <thead>

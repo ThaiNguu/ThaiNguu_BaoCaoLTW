@@ -2,10 +2,7 @@
 
 use App\Models\User;
 //SELECT*FROM category WHERE status !=0 AND ODERBY created DESC
-$dk = [
-   ['status','!=',0],
-   ['status','!=',0]
-];
+
 $list = User::where('status','!=',0)
 ->select('status','id','image','name','address')
  ->orderBy('created_at','DESC')
@@ -13,6 +10,8 @@ $list = User::where('status','!=',0)
 
 ?>
 <?php require_once '../views/backend/header.php'; ?>
+<form action="index.php?option=user&cat=process" method="post"
+enctype="multipart/form-data">
       <!-- CONTENT -->
       <div class="content-wrapper">
          <section class="content-header">
@@ -20,7 +19,7 @@ $list = User::where('status','!=',0)
                <div class="row mb-2">
                   <div class="col-sm-12">
                      <h1 class="d-inline">Tất cả thành viên</h1>
-                     <a href="user_create.html" class="btn btn-sm btn-primary">Thêm thành viên</a>
+                     <a href="index.php?option=user&cat=create" class="btn btn-sm btn-primary">Thêm thành viên</a>
                   </div>
                </div>
             </div>
@@ -28,17 +27,18 @@ $list = User::where('status','!=',0)
          <!-- Main content -->
          <section class="content">
             <div class="card">
-               <div class="card-header">
-                  Noi dung
-               </div>
+               <div class="card-header p-2">
+            <a href="index.php?option=user&cat=trash" class="btn btn-danger text-end">
+               <i class="fa fa-trash"></i> Thùng rác</a>
+         </div>
                <div class="card-body">
+               <?php require_once "../views/backend/message.php"; ?>
                   <table class="table table-bordered" id="mytable">
                      <thead>
                         <tr>
                            <th class="text-center" style="width:30px;">
                               <input type="checkbox">
                            </th>
-                           <th class="text-center" style="width:130px;">Hình ảnh</th>
                            <th>Họ tên</th>
                            <th>Điện thoại</th>
                            <th>Email</th>
@@ -51,12 +51,11 @@ $list = User::where('status','!=',0)
                            <td>
                               <input type="checkbox">
                            </td>
-                           <td>
-                              <img src="../public/images/<?php $item->image;?>" alt="<?php $item->image;?>">
-                           </td>
+                           
                            <td>
                               <div class="name">
                                  <?= $item->name; ?>
+                                 
                               </div>
                               <div class="function_style">
                               <?php if($item->status==1): ?>
@@ -68,14 +67,14 @@ $list = User::where('status','!=',0)
                                        <?php endif; ?> |
                                        <a href="index.php?option=user&cat=edit&id= <?=  $item->id; ?>"class="btn btn-primary btn-xs">
                                        <i class="fas fa-edit"></i> Chỉnh sửa</a> 
-                                       <a href="index.php?option=order&cat=show&id= <?=  $item->id; ?>"class="btn btn-info btn-xs">
+                                       <a href="index.php?option=user&cat=show&id= <?=  $item->id; ?>"class="btn btn-info btn-xs">
                                        <i class="fas fa-eye"></i>Chi tiết</a> 
                                        <a href="index.php?option=user&cat=delete&id= <?=  $item->id; ?>"class="btn btn-danger btn-xs">
                                        <i class="fas fa-trash"></i>Xoá</a>
                               </div>
                            </td>
-                           <td><?= $item->phone;?></td>
-                           <td><?= $item->email;?></td>
+                           <td><?= $item->phone; ?></td>
+                           <td><?= $item->email; ?></td>
                         </tr>
                         <?php endforeach; ?>
                               <?php endif; ?>
@@ -85,6 +84,7 @@ $list = User::where('status','!=',0)
             </div>
          </section>
       </div>
+</form>
       <!-- END CONTENT-->
 <?php require_once '../views/backend/footer.php'; ?>
       

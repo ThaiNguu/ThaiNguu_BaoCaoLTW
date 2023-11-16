@@ -13,7 +13,7 @@ $mod_mainmenu1 = Menu::where([['parent_id','=',$rowmenu->id],['position','=','ma
                               </a>
                               <ul class="dropdown-menu">
                                 <?php foreach($mod_mainmenu1 as $rowmenu1):?>
-                                 <li><a class="dropdown-item text-main" href="<?=$rowmenu1->link;?>"><?=$rowmenu1->name;?></a>
+                                 <li><a class="dropdown-item text-warning" href="<?=$rowmenu1->link;?>"><?=$rowmenu1->name;?></a>
                                  </li>
                                  <?php endforeach;?>
                               </ul>

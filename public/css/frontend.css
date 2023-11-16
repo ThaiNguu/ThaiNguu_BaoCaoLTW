@@ -1,14 +1,12 @@
 :root
 {
-    /* --text-main:#ff0099;
-    --bg-main:#ff0099; */
-    --text-main:#ffb71c;
-    --bg-main:#ffb71c;
+    --text-main:#ffc107;
+    --bg-main:var(--bg-main);
 }
 .bg-main
 {
     background-color:var(--bg-main);
-    color:white;
+    color:#ffc107;
 }
 .text-main
 {
@@ -16,13 +14,13 @@
 }
 .btn-main
 {
-   background-color:var(--bg-main);
+   background-color:var(--bg-main); 
    color:white;
 }
 .btn-main:hover
 {
-   border: 1px solid #ffb71c;
-   color:#ffb71c;
+   border: 1px solid var(--bg-main);
+   color:var(--bg-main);
 }
 /*hdl-header*/
 .box-cart {
@@ -30,13 +28,13 @@
     height: 60px;
     line-height: 60px;
     text-align: center;
-    border: 1px solid #ffb71c;
+    border: 1px solid #ffc107;
     position: relative;
  }
 
  .box-cart i {
     font-size: 26px;
-    color:#ffb71c;
+    color:#ffc107;
  }
 
  .box-cart span {
@@ -46,10 +44,10 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: #ffb71c;
+    background-color: #ffc107;
     line-height: 25px;
     font-size: 14px;
-    color: white;
+    color: #ffc107;
  }
 
  .call-login--register ul {
@@ -99,7 +97,7 @@
  }
 
  .product-item .product-item-name a {
-    color: #ffb71c;
+    color: var(--bg-main);
     text-decoration: none;
  }
 
@@ -117,7 +115,7 @@
  }
  ul.list-category li a,ul.list-brand li a,ul.list-page li a
  {
-   color:#ffb71c;
+   color:var(--bg-main);
    text-decoration: none;
    transition: 0.5s;
  }

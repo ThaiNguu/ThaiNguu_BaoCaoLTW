@@ -24,14 +24,14 @@ if(isset($_POST['THEM']))
         }
     }
     //tư sinh ra
-    $category->created_at = date('Y-m-d-H:i:s');
+    $category->created_at = date('Y-m-d H:i:s');
     $category->created_by = (isset($_SESSION['user_id']))? $_SESSION['user_id'] : 1;
     var_dump($category);
     //luu vao csdl
     //ínet
     $category->save();
     //
-    $_SESSION['message']="Thêm thành công";
+    MyClass::set_flash('message',['msg'=>'Thêm thành công','type'=>'success']);
 
     header("location:index.php?option=category");
 }
@@ -46,6 +46,7 @@ if(isset($_POST['CAPNHAT']))
     $category=Category::find($id);
     if ($category == NULL)
 {
+    MyClass::set_flash('message',['msg'=>'Lỗi trang 404','type'=>'danger']);
     header("location:index.php?option=category");
 }
     //lấy từ form
@@ -69,13 +70,14 @@ if(isset($_POST['CAPNHAT']))
         }
     }
     //tư sinh ra
-    $category->updated_at = date('Y-m-d-H:i:s');
+    $category->updated_at = date('Y-m-d H:i:s');
     $category->updated_by = (isset($_SESSION['user_id']))? $_SESSION['user_id'] : 1;
     var_dump($category);
     //luu vao csdl
     //ínet
     $category->save();
     //
+    MyClass::set_flash('message',['msg'=>'Cập nhật thành công','type'=>'success']);
     header("location:index.php?option=category");
 }
 

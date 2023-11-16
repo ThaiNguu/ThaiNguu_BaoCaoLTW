@@ -17,7 +17,7 @@ if ($category == NULL)
             <div class="container-fluid">
                <div class="row mb-2">
                   <div class="col-sm-12">
-                     <h1 class="d-inline">Chi tiết thương hiệu</h1>
+                     <h1 class="d-inline">Chi tiết danh mục</h1>
                   </div>
                </div>
                
@@ -39,7 +39,7 @@ if ($category == NULL)
                   <div class="row">
                      <div class="col-md-4">
                         <div class="mb-3">
-                           <label>Tên thương hiệu (*)</label>
+                           <label>Tên danh mục (*)</label>
                            <input type="text" name="name" class="form-control">
                         </div>
                         <div class="mb-3">
@@ -91,7 +91,7 @@ if ($category == NULL)
                          </tr> 
                          <tr>
                            <td>Hình ảnh</td>
-                           <td><img style="width:100px;" src="../public/images/category/<?=  $item->image; ?>" alt="<?=$item->image;?>" ></td>
+                           <td><img style="width:100px;" src="../public/images/category/<?=  $category->image; ?>" alt="<?=$category->image;?>" ></td>
                          </tr> 
                          <tr>
                            <td>Từ khóa</td>

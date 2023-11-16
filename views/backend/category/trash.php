@@ -15,7 +15,7 @@ $list = Category::where('status','=',0)
             <div class="container-fluid">
                <div class="row mb-2">
                   <div class="col-sm-12">
-                     <h1 class="d-inline">Thùng rác thương hiệu</h1>
+                     <h1 class="d-inline">Thùng rác danh mục</h1>
                   </div>
                </div>
                
@@ -41,7 +41,7 @@ $list = Category::where('status','=',0)
                   <div class="row">
                      <div class="col-md-4">
                         <div class="mb-3">
-                           <label>Tên thương hiệu (*)</label>
+                           <label>Tên danh mục (*)</label>
                            <input type="text" name="name" class="form-control">
                         </div>
                         <div class="mb-3">
@@ -70,7 +70,7 @@ $list = Category::where('status','=',0)
                                     <input type="checkbox">
                                  </th>
                                  <th class="text-center" style="width:130px;">Hình ảnh</th>
-                                 <th>Tên thương hiệu</th>
+                                 <th>Tên danh mục</th>
                                  <th>Tên slug</th>
                               </tr>
                            </thead>

@@ -1,6 +1,6 @@
 <?php
 use App\Models\Brand;
-//SELECT*FROM category WHERE status !=0 AND ODERBY created DESC
+//SELECT*FROM brand WHERE status !=0 AND ODERBY created DESC
 $id = $_REQUEST['id'];
 $brand = Brand::find($id);
 if ($brand == NULL)
@@ -11,7 +11,7 @@ if ($brand == NULL)
 ?>
 
 <?php require_once '../views/backend/header.php';?>
-<form action="index.php?option=category&cat=process" method="post"
+<form action="index.php?option=brand&cat=process" method="post"
 enctype="multipart/form-data">
       <!-- CONTENT -->
       <div class="content-wrapper">

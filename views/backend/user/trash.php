@@ -2,9 +2,9 @@
 use App\Models\User;
 //SELECT*FROM user WHERE status !=0 AND ODERBY created DESC
 
-$list = User::where('status','=',0)
-->select('status','id','image','name','slug')
- ->userBy('created_at','DESC')
+$list = User::where('status','!=',1)
+->select('status','id','image','name','address')
+ ->orderBy('created_at','DESC')
  ->get();
 
 ?>
@@ -15,7 +15,7 @@ $list = User::where('status','=',0)
             <div class="container-fluid">
                <div class="row mb-2">
                   <div class="col-sm-12">
-                     <h1 class="d-inline">Thùng rác thương hiệu</h1>
+                     <h1 class="d-inline">Thùng rác thành viên</h1>
                   </div>
                </div>
                
@@ -41,7 +41,7 @@ $list = User::where('status','=',0)
                   <div class="row">
                      <div class="col-md-4">
                         <div class="mb-3">
-                           <label>Tên thương hiệu (*)</label>
+                           <label>Tên thành viên (*)</label>
                            <input type="text" name="name" class="form-control">
                         </div>
                         <div class="mb-3">
@@ -70,7 +70,7 @@ $list = User::where('status','=',0)
                                     <input type="checkbox">
                                  </th>
                                  <th class="text-center" style="width:130px;">Hình ảnh</th>
-                                 <th>Tên thương hiệu</th>
+                                 <th>Tên thành viên</th>
                                  <th>Tên slug</th>
                               </tr>
                            </thead>

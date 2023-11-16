@@ -87,7 +87,7 @@ if ($brand == NULL)
                          </tr> 
                          <tr>
                            <td>Hình ảnh</td>
-                           <td><img style="width:100px;" src="../public/images/brand/<?=  $item->image; ?>" alt="<?=$item->image;?>" ></td>
+                           <td><img style="width:100px;" src="../public/images/brand/<?=  $brand->image; ?>" alt="<?=$brand->image;?>" ></td>
                          </tr> 
                          <tr>
                            <td>Từ khóa</td>

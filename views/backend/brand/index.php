@@ -1,6 +1,6 @@
 <?php
 use App\Models\Brand;
-use App\Libraries\MyClass;
+
 //SELECT*FROM category WHERE status !=0 AND ODERBY created DESC
 
 $list = Brand::where('status','!=',0)
@@ -45,7 +45,7 @@ enctype="multipart/form-data">
                   </div>
                </div>
                <div class="card-body">
-               <?php require_once '../views/backend/message.php';?>
+                 <?php require '../views/backend/message.php';?>
                   <div class="row">
                      <div class="col-md-4">
                         <div class="mb-3">
@@ -88,7 +88,7 @@ enctype="multipart/form-data">
                                     <input type="checkbox">
                                  </td>
                                  <td>
-                                    <img src="../public/images/brand/<?php  $item->image; ?>" alt="<?php  $item->image; ?>">
+                                    <img src="../public/images/brand/<?=  $item->image; ?>" alt="<?=  $item->image; ?>" style="width:130px;">
                                  </td>
                                  <td>
                                     <div class="name">

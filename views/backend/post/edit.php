@@ -1,6 +1,6 @@
 <?php
 use App\Models\Post;
-//SELECT*FROM category WHERE status !=0 AND ODERBY created DESC
+//SELECT*FROM post WHERE status !=0 AND ODERBY created DESC
 $id = $_REQUEST['id'];
 $post = Post::find($id);
 if ($post == NULL)
@@ -18,7 +18,7 @@ enctype="multipart/form-data">
             <div class="container-fluid">
                <div class="row mb-2">
                   <div class="col-sm-12">
-                     <h1 class="d-inline">Cập nhật thương hiệu</h1>
+                     <h1 class="d-inline">Cập nhật bài viết</h1>
                   </div>
                </div>
             </div>
@@ -28,7 +28,7 @@ enctype="multipart/form-data">
             <div class="card">
                <div class="card-header text-right">
                   <button class="btn btn-sm btn-success" type="
-                  submit" name="CAPNHAT">
+                  submit" name="CAPNHAT"> 
                      <i class="fa fa-save" aria-hidden="true"></i>
                      Lưu
                   </button>
@@ -42,16 +42,16 @@ enctype="multipart/form-data">
                      <div class="col-md-12">
                         <div class="mb-3">
                            <input type="hidden" name = "id" value="<?= $post->id;?>">
-                           <label>Tên thương hiệu (*)</label>
-                           <input type="text" value="<?= $post->name;?>" name= "name" class="form-control">
+                           <label>Tên bài viết (*)</label>
+                           <input type="text" value="<?= $post->title;?>" name= "name" class="form-control">
                         </div>
                         <div class="mb-3">
                            <label>Slug</label>
                            <input type="text" value="<?= $post->slug;?>"name="slug" class="form-control">
                         </div>
                         <div class="mb-3">
-                           <label>Mô tả</label>
-                           <textarea name="description" class="form-control"><?= $post->description;?></textarea>
+                           <label>Chi tiết</label>
+                           <textarea name="detail" class="form-control"><?= $post->detail;?></textarea>
                         </div>
                         <div class="mb-3">
                            <label>Hình đại diện</label>

@@ -24,13 +24,13 @@ if(isset($_order['THEM']))
         }
     }
     //tư sinh ra
-    $order->created_at = date('Y-m-d-H:i:s');
+    $order->created_at = date('Y-m-d H:i:s');
     $order->created_by = (isset($_SESSION['user_id']))? $_SESSION['user_id'] : 1;
     var_dump($order);
     //luu vao csdl
     //ínet
     $order->save();
-    $_SESSION['message']="Thêm thành công";
+    MyClass::set_flash('message',['msg'=>'Thêm thành công','type'=>'success']);
     header("location:index.php?option=order");
 }
 
@@ -44,6 +44,7 @@ if(isset($_order['CAPNHAT']))
     $order=Order::find($id);
     if ($order == NULL)
 {
+    MyClass::set_flash('message',['msg'=>'Lỗi trang 404','type'=>'danger']);
     header("location:index.php?option=order");
 }
     //lấy từ form
@@ -67,13 +68,14 @@ if(isset($_order['CAPNHAT']))
         }
     }
     //tư sinh ra
-    $order->updated_at = date('Y-m-d-H:i:s');
+    $order->updated_at = date('Y-m-d H:i:s');
     $order->updated_by = (isset($_SESSION['user_id']))? $_SESSION['user_id'] : 1;
     var_dump($order);
     //luu vao csdl
     //ínet
     $order->save();
     //
+    MyClass::set_flash('message',['msg'=>'Cập nhật thành công','type'=>'success']);
     header("location:index.php?option=order");
 }
 
